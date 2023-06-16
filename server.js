@@ -12,7 +12,7 @@ const calendar = google.calendar({
 });
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'index.html')));
 
 // Endpoint to get events from Google Calendar
 app.get('/events', async (req, res) => {
@@ -36,7 +36,7 @@ app.get('/events', async (req, res) => {
 
 // Serve the index.html file for the root URL
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Start the server
