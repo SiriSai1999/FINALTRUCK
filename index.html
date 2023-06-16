@@ -62,8 +62,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
 
+
+strong{
+    font-size: 1.5vw !important;
+}
 
   h1{
     color: #404347 !important;
@@ -74,6 +79,7 @@
     font-size: 3.5vw !important;
     font-style: italic !important;
     margin: 0.5vw 0;
+    font-weight: bolder !important;
   }
 
   h2{
@@ -144,7 +150,7 @@
 var endTime = new Date(event.end.dateTime).toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
         eventContent.innerHTML = '<h1>' + event.summary + '</h1>' +
                                  '<p><strong>Loading Dock:</strong>' +"&nbsp;&nbsp;<strong>" + event.description+ '</strong></p>' +
-                                 '<p><strong>ETA:&nbsp;&nbsp; </strong> '+ event.start.dateTime.split('T')[0] +"&nbsp;&nbsp;"+ startTime+"&nbsp;"+"-"+"&nbsp;" + endTime  + '</p>' ;
+                                 '<p><strong>ETA:&nbsp;&nbsp; '+ event.start.dateTime.split('T')[0] +"&nbsp;&nbsp;"+ startTime+"&nbsp;"+"-"+"&nbsp;" + endTime  + '</strong> </p>' ;
 
         eventElement.appendChild(eventContent);
         eventsContainer.appendChild(eventElement);
