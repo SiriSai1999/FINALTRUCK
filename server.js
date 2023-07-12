@@ -21,7 +21,7 @@ app.get('/events', async (req, res) => {
     const response = await calendar.events.list({
       calendarId: 'mitekshippingtampa@gmail.com',
       timeMin: new Date().toISOString(),
-      maxResults: 10,
+      maxResults: 6,
       singleEvents: true,
       orderBy: 'startTime',
     });

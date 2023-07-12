@@ -6,6 +6,7 @@
   <style>
 
 
+
   .events {
     border: 1px solid #ccc;
     padding: 10px;
@@ -35,11 +36,11 @@
   }
 
   .heading-body{
-    position: fixed;
+    /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
   text-align: center;
   }
 
@@ -75,8 +76,8 @@ strong{
     font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 2.5vw !important;
+    align-items: center !important;
+    font-size: 5vw !important;
     font-style: italic !important;
     margin: 0.5vw 0;
     font-weight: bolder !important;
@@ -95,8 +96,16 @@ strong{
   }
 
   #events-container {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+  align-items: center; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%!important;
   }
 
   .event {
@@ -106,7 +115,7 @@ strong{
     background-color: #ffffff;
     padding: 10px;
     margin: 10px;
-    flex: 1 0 calc(33.33% - 20px); /* Adjust the width based on your preference */
+    flex: 1 0 calc(80% - 20px); /* Adjust the width based on your preference */
   }
 
 
@@ -117,14 +126,14 @@ strong{
 </head>
 <body>
 <div class ="main-body">
-  <div = "heading-body">
+  <div class = "heading-body">
     <h2>
       <span>MiTek</span>  Tampa Truck Schedule
     </h2>
   </div>
 
 <div class = "album py-2 bg-body-teritiary">
-
+<!-- <div class ="row"> -->
   <div id="events-container">
     <!-- Events will be dynamically added here -->
 
@@ -164,6 +173,7 @@ var endTime = new Date(event.end.dateTime).toLocaleTimeString('en-US', { hour: '
   </script>
 </div>
 </div>
+<!-- </div> -->
 </div>
 </body>
 </html>
